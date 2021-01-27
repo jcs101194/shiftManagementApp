@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="400dp"
+    android:layout_height="match_parent">
+<RelativeLayout
+
+    android:id="@+id/fragment_add_shift"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    tools:context=".AddShiftFragment"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent">
+
+    <!-- All elements are anchored to the next TextView -->
+    <TextView
+        android:id="@+id/startDateString"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start date"
+        android:textSize="18sp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"/>
+    <EditText
+        android:id="@+id/startDate"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@id/startDateString"
+        android:layout_toEndOf="@id/startDateString"
+        android:layout_marginStart="10dp"
+        android:focusable="false"/>
+    <ImageView
+        android:id="@+id/startDateCalendarButton"
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        android:src="@drawable/calendar_icon"
+        android:layout_alignBottom="@+id/startDate"
+        android:layout_toEndOf="@id/startDate"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/endDateString"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End date"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/startDateString"
+        android:layout_alignStart="@id/startDateString"/>
+    <EditText
+        android:id="@+id/endDate"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@id/endDateString"
+        android:layout_alignStart="@id/startDate"
+        android:layout_marginTop="20dp"
+        android:focusable="false"/>
+    <ImageView
+        android:id="@+id/endDateCalendarButton"
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        android:src="@drawable/calendar_icon"
+        android:layout_alignBottom="@+id/endDate"
+        android:layout_toEndOf="@id/endDate"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/employeeString"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Employee"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/endDateString"
+        android:layout_alignStart="@id/startDateString"/>
+
+    <Spinner
+        android:id="@+id/employeeNameList"
+        android:layout_width="@dimen/list_view_width"
+        android:layout_height="40dp"
+        android:layout_alignTop="@id/employeeString"
+        android:layout_alignEnd="@id/startDate" />
+
+    <TextView
+        android:id="@+id/roleString"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Role"
+        android:textSize="18sp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/employeeString"
+        android:layout_alignStart="@id/startDateString"
+        android:layout_alignLeft="@id/startDateString"/>
+
+    <Spinner
+        android:id="@+id/roleList"
+        android:layout_width="@dimen/list_view_width"
+        android:layout_height="40dp"
+        android:layout_alignTop="@id/roleString"
+        android:layout_alignEnd="@id/employeeNameList"/>
+
+    <TextView
+        android:id="@+id/colorString"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color"
+        android:layout_below="@id/roleString"
+        android:textSize="18sp"
+        android:layout_marginTop="40dp"
+        android:layout_alignStart="@id/startDateString"
+        android:layout_alignLeft="@id/startDateString"/>
+
+    <Spinner
+        android:id="@+id/colorList"
+        android:layout_width="@dimen/list_view_width"
+        android:layout_height="40dp"
+        android:layout_alignTop="@id/colorString"
+        android:layout_alignEnd="@id/employeeNameList"/>
+
+</RelativeLayout>
+</androidx.core.widget.NestedScrollView>
